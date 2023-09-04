@@ -28,9 +28,9 @@ Download : https://github.com/BootstrapDash/Azia-Admin-Bootstrap-Template.git<br
 <br>
 # Database<br>
 Server/Host : mandiricoal.co.id<br>
-Database Name : siaga<br>
-Username : siaga<br>
-Password : Mandiricoal2024!<br>
+Database Name : ******<br>
+Username : ******<br>
+Password : ******<br>
 <br>
 # Link<br>
 Development : https://siaga.mandiricoal.net/<br>
