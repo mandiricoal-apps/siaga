@@ -20,12 +20,6 @@ Database  : MySQL<br>
     <li>php artisan serve</li>
 </ol>
 <br>
-
-# Reference Design Aplication<br>
-<img src="https://www.bootstrapdash.com/blog/wp-content/uploads/2023/07/Azia-Bootstrap-Admin-Dashboard-Template.png" width="50%"><br>
-Demo : https://demo.bootstrapdash.com/azia/v1.0.0/template/dashboard-one.html<br>
-Download : https://github.com/BootstrapDash/Azia-Admin-Bootstrap-Template.git<br>
-<br>
 # Database<br>
 Server/Host : mandiricoal.co.id<br>
 Database Name : ******<br>
