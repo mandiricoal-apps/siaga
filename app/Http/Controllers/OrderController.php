@@ -33,4 +33,8 @@ class OrderController extends Controller
     public function ga_permintaan_pesanan(){  //permintaan pesanan
         return view('ga.permintaanpesanan');
     }
+
+    public function data_pesanan(){  //data pesanan catering
+        return view('catering.datapesanan');
+    }
 }

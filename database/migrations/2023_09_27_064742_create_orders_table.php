@@ -16,12 +16,13 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->string('jenis_pesanan');
-            $table->date('tanggal_pesanan');
+            $table->dateTime('tanggal_pesanan');
             $table->integer('jumlah_pesanan');
             $table->string('detail-karyawan');
             $table->text('catatan');
             $table->string('status');
-            $table->date('tanggal_pemesanan');
+            $table->text('lokasi_pengantaran');
+            $table->text('alasan');
             $table->timestamps();
 
             $table->unsignedBigInteger('id_menu');

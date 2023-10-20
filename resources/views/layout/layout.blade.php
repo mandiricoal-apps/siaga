@@ -21,6 +21,7 @@
     <link id="pagestyle" href="{{ asset('../assets/css/argon-dashboard.css?v=2.0.4')}}" rel="stylesheet" />
 
     <script src="{{ asset('https://kit.fontawesome.com/0fe5c30090.js')}}" crossorigin="anonymous"></script>
+
     <style>
         .card {
             border-radius: 30px;
@@ -37,6 +38,7 @@
     @yield('sidebar')
 
     <main class="main-content position-relative border-radius-lg ">
+        @include('navbar.navbar')
         @yield('content')
     </main>
     <div class="fixed-plugin" id="sidenav-collapse-main">

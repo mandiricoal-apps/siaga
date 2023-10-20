@@ -1,187 +1,408 @@
-    <!-- Navbar -->
-    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl " id="navbarBlur" data-scroll="false">
-        <div class="container-fluid py-1 px-3">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
-              <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white" href="javascript:;">Dashboard</a></li>
-              <li class="breadcrumb-item text-sm text-white active" aria-current="page">Tambah Menu</li>
-            </ol>
-            <h4 class="font-weight-bolder text-white mb-0 mt-3">Tambah Data Menu</h4>
-          </nav>
-          <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
-            <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-              <div class="input-group">
-                <span class="input-group-text text-body"><i class="fas fa-search" aria-hidden="true"></i></span>
-                <input type="text" class="form-control" placeholder="Type here...">
-              </div>
-            </div>
-            <ul class="navbar-nav  justify-content-end">
-              <li class="nav-item d-flex align-items-center">
-                <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
-                  <i class="fa fa-user me-sm-1"></i>
-                  <span class="d-sm-inline d-none">Sign In</span>
-                </a>
-              </li>
-              <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-                <a href="javascript:;" class="nav-link text-white p-0" id="iconNavbarSidenav">
-                  <div class="sidenav-toggler-inner">
-                    <i class="sidenav-toggler-line bg-white"></i>
-                    <i class="sidenav-toggler-line bg-white"></i>
-                    <i class="sidenav-toggler-line bg-white"></i>
-                  </div>
-                </a>
-              </li>
-              <li class="nav-item px-3 d-flex align-items-center">
-                <a href="javascript:;" class="nav-link text-white p-0">
-                  <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
-                </a>
-              </li>
-              <li class="nav-item dropdown pe-2 d-flex align-items-center">
-                <a href="javascript:;" class="nav-link text-white p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fa fa-bell cursor-pointer"></i>
-                </a>
-                <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
-                  <li class="mb-2">
-                    <a class="dropdown-item border-radius-md" href="javascript:;">
-                      <div class="d-flex py-1">
-                        <div class="my-auto">
-                          <img src="../assets/img/team-2.jpg" class="avatar avatar-sm  me-3 ">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="text-sm font-weight-normal mb-1">
-                            <span class="font-weight-bold">New message</span> from Laur
-                          </h6>
-                          <p class="text-xs text-secondary mb-0">
-                            <i class="fa fa-clock me-1"></i>
-                            13 minutes ago
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="mb-2">
-                    <a class="dropdown-item border-radius-md" href="javascript:;">
-                      <div class="d-flex py-1">
-                        <div class="my-auto">
-                          <img src="../assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark  me-3 ">
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="text-sm font-weight-normal mb-1">
-                            <span class="font-weight-bold">New album</span> by Travis Scott
-                          </h6>
-                          <p class="text-xs text-secondary mb-0">
-                            <i class="fa fa-clock me-1"></i>
-                            1 day
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item border-radius-md" href="javascript:;">
-                      <div class="d-flex py-1">
-                        <div class="avatar avatar-sm bg-gradient-secondary  me-3  my-auto">
-                          <svg width="12px" height="12px" viewBox="0 0 43 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <title>credit-card</title>
-                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                              <g transform="translate(-2169.000000, -745.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                                <g transform="translate(1716.000000, 291.000000)">
-                                  <g transform="translate(453.000000, 454.000000)">
-                                    <path class="color-background" d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z" opacity="0.593633743"></path>
-                                    <path class="color-background" d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"></path>
-                                  </g>
-                                </g>
-                              </g>
-                            </g>
-                          </svg>
-                        </div>
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="text-sm font-weight-normal mb-1">
-                            Payment successfully completed
-                          </h6>
-                          <p class="text-xs text-secondary mb-0">
-                            <i class="fa fa-clock me-1"></i>
-                            2 days
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <!-- End Navbar -->
-      <div class="container-fluid py-4 mt-3">
-        <div class="row justify-content-center">
-          <div class="col-10 text">
-                <div class="card">
-                  <div class="card-header pb-0">
-                    <div class="d-flex align-items-center">
-                      <p class="mb-0 fw-bold fs-4"> Form Tambah Data Menu</p>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="example-text-input" class="form-control-label">Jenis Menu</label>
-                          <select class="form-control" aria-label="Default select example">
-                            <option selected disabled>Pilih Menu</option>
-                            <option value="1">Snack</option>
-                            <option value="2">Menu Spesial</option>
-                          </select>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-                        </div>
-                      </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="example-text-input" class="form-control-label">Gambar Makanan</label>
-                          <input class="form-control" type="file">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="example-text-input" class="form-control-label">Nama Makanan</label>
-                          <input class="form-control" type="text">
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label for="example-text-input" class="form-control-label">Deskripsi</label>
-                          <textarea class="form-control" rows="4" cols="50"></textarea>
-                        </div>
-                      </div>
-                    </div>
-                    <hr class="horizontal dark">
-                    <p class="text-uppercase text-sm">Masa Berlaku</p>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="example-text-input" class="form-control-label">Tanggal Awal</label>
-                          <input class="form-control" type="datetime-local">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="example-text-input" class="form-control-label">Tanggal Berakhir</label>
-                          <input class="form-control" type="date">
-                        </div>
-                      </div>
+<style>
+    /* CSS untuk menyembunyikan formulir */
+    #form-tambah {
+        display: none;
+    }
+</style>
+<!-- End Navbar -->
+<div class="container-fluid py-4 mt-3">
+    @if (session('error'))
+        <script>
+            // Tampilkan pesan error dalam pop-up
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: '{{ session('error') }}', // Ambil pesan error dari session
+            });
+        </script>
+    @endif
+    @if (session('success'))
+        <script>
+            // Tampilkan pesan error dalam pop-up
+            Swal.fire({
+                icon: 'success',
+                title: 'Berhasil',
+                text: '{{ session('success') }}', // Ambil pesan error dari session
+            });
+        </script>
+    @endif
+    <div class="row justify-content-center">
 
-                    </div>
-                    <hr class="horizontal dark">
-                  </div>
-                  <div class="card-header pb-0 mb-5">
-                    <div class="d-flex align-items-center">
-                      <a class="btn btn-sm ms-auto bg-gradient-success" href="#">Tambah</a>
-                    </div>
-                  </div>
+        <div class="col-12 mb-4">
+            <div class="card-header pb-0">
+                <div class=" align-items-center">
+                    <button class="btn btn-sm ms-auto bg-gradient-success" onclick="toggleForm()">Tambah Data Menu
+                        Mingguan</button>
                 </div>
-          </div>
+            </div>
+            <form action="{{ route('catering.addmenu') }}" method="POST" id="form-menu">
+                @csrf
+                <div class="card" id="form-tambah">
+                    <div class="card-header pb-0">
+                        <div class="d-flex align-items-center">
+                            <p class="mb-0 fw-bold fs-4"> Form Tambah Menu</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="example-text-input" class="form-control-label"><span class="text-xxs"
+                                            style="vertical-align: top;"><i
+                                                class="fa-solid fa-star-of-life fa-2xs mb-1 text-danger"></i></span>
+                                        Nama Menu
+                                        Makan</label>
+                                    <input class="form-control" name="nama_makanan" type="text" value="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="example-text-input" class="form-control-label"><span class="text-xxs"
+                                            style="vertical-align: top;"><i
+                                                class="fa-solid fa-star-of-life fa-2xs mb-1 text-danger"></i></span>
+                                        Jenis Menu</label>
+                                    <select name="jenis_makanan" class="form-select" required>
+                                        <option value="0">Pilih Jenis Menu</option>
+                                        <option value="1">Menu Spesial</option>
+                                        <option value="2">Snack</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="example-text-input" class="form-control-label">Deskripsi</label>
+                                    <textarea class="form-control" rows="4" cols="50" name="deskripsi"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="horizontal dark">
+                        <p class="text-uppercase text-sm"><span class="text-xxs" style="vertical-align: top;"><i
+                                    class="fa-solid fa-star-of-life fa-2xs mb-1 text-danger"></i></span> Masa Berlaku
+                        </p>
+                        <div class="row">
+                            <div class="form-group col-md-3">
+
+                                <label for="detail_karyawan" class="form-control-label">Senin</label>
+                                <div class="input-group">
+                                    <input type="date" name="tanggal[]" class="form-control" value=""
+                                        required readonly>
+                                    <select name="shift[]" class="form-select" required>
+                                        <option value="0" selected>Pilih Shift</option>
+                                        <option value="Pagi">Pagi</option>
+                                        <option value="Siang">Siang</option>
+                                        <option value="Malam">Malam</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label for="detail_karyawan" class="form-control-label">Selasa</label>
+                                <div class="input-group">
+                                    <input type="date" name="tanggal[]" class="form-control" value=""
+                                        required readonly>
+                                    <select name="shift[]" class="form-select" required>
+                                        <option value="0" selected>Pilih Shift</option>
+                                        <option value="Pagi">Pagi</option>
+                                        <option value="Siang">Siang</option>
+                                        <option value="Malam">Malam</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label for="detail_karyawan" class="form-control-label">Rabu</label>
+                                <div class="input-group">
+                                    <input type="date" name="tanggal[]" class="form-control" value=""
+                                        required readonly>
+                                    <select name="shift[]" class="form-select" required>
+                                        <option value="0" selected>Pilih Shift</option>
+                                        <option value="Pagi">Pagi</option>
+                                        <option value="Siang">Siang</option>
+                                        <option value="Malam">Malam</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label for="detail_karyawan" class="form-control-label">Kamis</label>
+                                <div class="input-group">
+                                    <input type="date" name="tanggal[]" class="form-control" value=""
+                                        required readonly>
+                                    <select name="shift[]" class="form-select" required>
+                                        <option value="0" selected>Pilih Shift</option>
+                                        <option value="Pagi">Pagi</option>
+                                        <option value="Siang">Siang</option>
+                                        <option value="Malam">Malam</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label for="detail_karyawan" class="form-control-label">Jumat</label>
+                                <div class="input-group">
+                                    <input type="date" name="tanggal[]" class="form-control" value=""
+                                        required readonly>
+                                    <select name="shift[]" class="form-select" required>
+                                        <option value="0" selected>Pilih Shift</option>
+                                        <option value="Pagi">Pagi</option>
+                                        <option value="Siang">Siang</option>
+                                        <option value="Malam">Malam</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label for="detail_karyawan" class="form-control-label">Sabtu</label>
+                                <div class="input-group">
+                                    <input type="date" name="tanggal[]" class="form-control" value=""
+                                        required readonly>
+                                    <select name="shift[]" class="form-select" required>
+                                        <option value="0" selected>Pilih Shift</option>
+                                        <option value="Pagi">Pagi</option>
+                                        <option value="Siang">Siang</option>
+                                        <option value="Malam">Malam</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-3">
+                                <label for="detail_karyawan" class="form-control-label">Minggu</label>
+                                <div class="input-group">
+                                    <input type="date" name="tanggal[]" class="form-control" value=""
+                                        required readonly>
+                                    <select name="shift[]" class="form-select" required>
+                                        <option value="0" selected>Pilih Shift</option>
+                                        <option value="Pagi">Pagi</option>
+                                        <option value="Siang">Siang</option>
+                                        <option value="Malam">Malam</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="horizontal dark">
+                        <div class="card-header pb-0 mb-5">
+                            <div class="d-flex align-items-center">
+                                <button class="btn btn-sm ms-auto bg-gradient-success" type="button" onclick="showConfirmation()">Tambah</button>
+                            </div>
+                        </div>
+                        <script>
+                            // Fungsi untuk mendapatkan tanggal berdasarkan label hari
+                            function getStartDateByDay(dayLabel) {
+                                const today = new Date();
+                                const currentDayOfWeek = today.getDay(); // 0 untuk Minggu, 1 untuk Senin, dst.
+                                const sunday = new Date(today);
+                                sunday.setDate(today.getDate() - currentDayOfWeek); // Set to the most recent Sunday
+                                const dayIndex = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"].indexOf(dayLabel);
+                                return new Date(sunday.setDate(sunday.getDate() + dayIndex + 1)).toISOString().split('T')[
+                                    0]; // Format tanggal (YYYY-MM-DD)
+                            }
+
+                            // Fungsi untuk mengatur tanggal input berdasarkan label hari
+                            function setStartDateByDay(dayLabel, inputElement) {
+                                const startDate = getStartDateByDay(dayLabel);
+                                inputElement.value = startDate;
+                            }
+
+                            // Panggil fungsi setStartDateByDay saat halaman dimuat untuk mengatur tanggal input
+                            window.onload = function() {
+                                const dayLabels = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"];
+                                const dateInputs = document.querySelectorAll('input[name="tanggal[]"]');
+                                dayLabels.forEach((dayLabel, index) => {
+                                    setStartDateByDay(dayLabel, dateInputs[index]);
+                                });
+                            };
+                        </script>
+
+                        <script>
+                            // Fungsi untuk menampilkan konfirmasi sebelum menambah data
+                            function showConfirmation() {
+                                Swal.fire({
+                                    title: 'Konfirmasi',
+                                    text: 'Apakah Anda yakin ingin menambahkan data ini?',
+                                    icon: 'warning',
+                                    showCancelButton: true,
+                                    confirmButtonText: 'Ya',
+                                    cancelButtonText: 'Batal',
+                                }).then((result) => {
+                                    if (result.isConfirmed) {
+                                        document.getElementById('form-menu').submit();
+                                    }
+                                });
+                            }
+                        </script>
+                    </div>
+                </div>
+
+            </form>
         </div>
-      </div>
+        <div class="col-12 text mb-4">
+            <div class="card">
+                <div class="card-header pb-0">
+                    <div class="d-flex align-items-center">
+                        <p class="mb-0 fw-bold fs-4">Jadwal Snack Mingguan</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0 rotated-table" style="min-height: 300px">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    @foreach (range(0, 6) as $i)
+                                        @php
+                                            $date = now()
+                                                ->startOfWeek()
+                                                ->addDays($i);
+                                        @endphp
+                                        <th
+                                            class="text-center text-uppercase text-secondary text-sm font-weight-bolder opacity-7">
+                                            {{ $date->isoFormat('dddd') }}<br>
+                                            <p class="text-xs">{{ $date->isoFormat('DD MMM YYYY') }}</p>
+                                        </th>
+                                    @endforeach
+                                </tr>
+                            </thead>
+                            @if ($countSnack != 0)
+                                <tbody>
+                                    @foreach ($groupedSnacks as $shift => $snacksInShift)
+                                        <tr>
+                                            <td>
+                                                <span
+                                                    class="text-secondary text-md font-weight-bold">{{ $shift }}</span>
+                                            </td>
+                                            @foreach (range(0, 6) as $day)
+                                                @php
+                                                    $date = now()
+                                                        ->startOfWeek()
+                                                        ->addDays($day);
+                                                @endphp
+                                                <td class="align-middle text-center text-sm">
+                                                    @foreach ($snacksInShift as $snack)
+                                                        @php
+                                                            $carbonDate = \Carbon\Carbon::parse($snack->tanggal_berlaku);
+                                                            $dayOfWeek = $carbonDate->dayOfWeek; // Mendapatkan indeks hari (0 untuk Minggu, 1 untuk Senin, dst.)
+                                                        @endphp
+                                                        @if ($dayOfWeek == array_search($day, [-1, 0, 1, 2, 3, 4, 5]) && $snack->shift == $shift)
+                                                            <span
+                                                                class="text-secondary text-xs font-weight-bold">{{ $snack->nama_makanan }}</span>
+                                                            <br>
+                                                        @endif
+                                                    @endforeach
+                                                </td>
+                                            @endforeach
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            @else
+                                <tbody>
+                                    <tr>
+                                        <th colspan="8" class="align-middle text-center">
+                                            <span class="text-secondary text-md font-weight-bold"><em>Data Snack
+                                                    Masih Kosong</em></span>
+                                        </th>
+
+                                    </tr>
+                                </tbody>
+                            @endif
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 text mb-4">
+            <div class="card">
+                <div class="card-header pb-0">
+                    <div class="d-flex align-items-center">
+                        <p class="mb-0 fw-bold fs-4">Jadwal Menu Spesial Mingguan</p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0 rotated-table" style="min-height: 300px">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    @foreach (range(0, 6) as $i)
+                                        @php
+                                            $date = now()
+                                                ->startOfWeek()
+                                                ->addDays($i);
+                                        @endphp
+                                        <th
+                                            class="text-center text-uppercase text-secondary text-sm font-weight-bolder opacity-7">
+                                            {{ $date->isoFormat('dddd') }}<br>
+                                            <p class="text-xs">{{ $date->isoFormat('DD MMM YYYY') }}</p>
+                                        </th>
+                                    @endforeach
+                                </tr>
+                            </thead>
+                            @if ($countMenus != 0)
+                                <tbody class=>
+                                    @foreach ($groupedMenus as $shift => $menusInShift)
+                                        <tr>
+                                            <td>
+                                                <span
+                                                    class="text-secondary text-md font-weight-bold">{{ $shift }}</span>
+                                            </td>
+                                            @foreach (range(0, 6) as $day)
+                                                @php
+                                                    $date = now()
+                                                        ->startOfWeek()
+                                                        ->addDays($day);
+                                                @endphp
+                                                <td class="align-middle text-center text-md">
+                                                    @foreach ($menusInShift as $menu)
+                                                        @php
+                                                            $carbonDate = \Carbon\Carbon::parse($menu->tanggal_berlaku);
+                                                            $dayOfWeek = $carbonDate->dayOfWeek; // Mendapatkan indeks hari (0 untuk Minggu, 1 untuk Senin, dst.)
+                                                        @endphp
+                                                        @if ($dayOfWeek == array_search($day, [-1, 0, 1, 2, 3, 4, 5]) && $menu->shift == $shift)
+                                                            <span
+                                                                class="text-secondary text-sm font-weight-bold">{{ $menu->nama_makanan }}</span>
+                                                            <br>
+                                                            @php
+                                                                $menuFound = true;
+                                                            @endphp
+                                                        @endif
+                                                    @endforeach
+
+                                                </td>
+                                            @endforeach
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            @else
+                                <tbody>
+                                    <tr>
+                                        <th colspan="8" class="align-middle text-center">
+                                            <span class="text-secondary text-md font-weight-bold"><em>Data Menu Spesial
+                                                    Masih Kosong</em></span>
+                                        </th>
+
+                                    </tr>
+                                </tbody>
+                            @endif
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Fungsi untuk menampilkan atau menyembunyikan formulir
+    function toggleForm() {
+        var form = document.getElementById('form-tambah');
+        if (form.style.display === 'none') {
+            form.style.display = 'block';
+        } else {
+            form.style.display = 'none';
+        }
+    }
+</script>
