@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('jenis_pesanan');
             $table->dateTime('tanggal_pesanan');
             $table->integer('jumlah_pesanan');
-            $table->string('detail-karyawan');
+            $table->string('detail_karyawan');
             $table->text('catatan')->nullable();
             $table->string('status')->default('Menunggu');
             $table->text('lokasi_pengantaran');
