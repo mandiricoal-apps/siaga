@@ -53,7 +53,7 @@
         <div class="col-10">
             <div class="card mb-4">
                 <div class="card-header pb-0">
-                    <h6>Menu Spesial Table</h6>
+                    <h6>Tabel Menu Spesial</h6>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive p-0">

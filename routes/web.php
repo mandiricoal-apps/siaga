@@ -3,6 +3,7 @@
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -43,6 +44,8 @@ Route::middleware(['auth', 'isDepartemen'])->group(function () {
         Route::get('/ubah-pesanan', [OrderController::class, 'depart_ubah_pesanan'])->name('departemen.ubahpesanan'); // ubah pesanan
         Route::get('/data-snack', [MenuController::class, 'depart_snack'])->name('departemen.datasnack'); //data snack departemen
         Route::get('/data-menu-spesial', [MenuController::class, 'depart_menuspesial'])->name('departemen.datamenuspesial'); //data menu spesial departemen
+        Route::get('/get-menu', [OrderController::class, 'getMenu'])->name('get.menu'); //mengambil menu yang tersedia pada form pesanan
+        Route::post('/proses-pesanan', [OrderController::class, 'pesanan'])->name('ga.pesan'); //pesan menu makanan
     });
 });
 
@@ -55,10 +58,11 @@ Route::middleware(['auth', 'isGA'])->group(function () {
         Route::get('/data-snack', [MenuController::class, 'ga_snack'])->name('ga.datasnack'); //data snack ga
         Route::get('/data-menu-spesial', [MenuController::class, 'ga_menuspesial'])->name('ga.datamenuspesial'); //data menu spesial ga
         Route::get('/permintaan-pesanan', [OrderController::class, 'ga_permintaan_pesanan'])->name('ga.permintaanpesanan'); //data menu spesial ga
+        Route::get('/kelola-pengguna', [UserController::class, 'kelolapengguna'])->name('ga.kelolapengguna'); //kelola pengguna
+        Route::post('/proses-tambah-pengguna', [UserController::class, 'add_user'])->name('ga.adduser'); //tambah user
+        Route::post('/proses-ubah-pengguna/{id}', [UserController::class, 'update_user'])->name('ga.updateuser'); //update user
     });
 });
-
-
 
 Auth::routes();
 

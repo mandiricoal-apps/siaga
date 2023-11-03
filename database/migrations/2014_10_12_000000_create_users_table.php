@@ -19,15 +19,16 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('level');
-            $table->string('departemen');
-            $table->string('perusahaan');
-            $table->string('no_telp');
+            $table->string('level')->nullable();
+            $table->string('departemen')->nullable();
+            $table->string('perusahaan')->nullable();
+            $table->string('no_telp')->nullable();
+            $table->string('status')->default("Aktif");
             $table->rememberToken();
             $table->timestamps();
 
             $table->unsignedBigInteger('id_role');
-            $table->unsignedBigInteger('id_departemen');
+            $table->unsignedBigInteger('id_departemen')->nullable();
         });
     }
 

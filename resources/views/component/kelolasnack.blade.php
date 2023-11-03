@@ -56,7 +56,7 @@
                 <div class="col-10">
                     <div class="card mb-4">
                         <div class="card-header pb-0">
-                            <h6>Snack Table</h6>
+                            <h6>Table Snack</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive p-0">

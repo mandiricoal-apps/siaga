@@ -184,29 +184,6 @@
                                         </li>
                                     @endif
                                 @endforeach
-                                {{-- <li class="timeline-item mb-4">
-
-                                    <span class="timeline-icon">
-                                        <i class="fa-solid fa-sun text-primary fa-xs fa-fw"></i>
-                                    </span>
-                                    <h5 class="fw-bold text-xs">Risol</h5>
-                                    <p class="text-muted mb-2 fw-bold text-xs">Tersedia : 12.00 - 17.00 WIB</p>
-                                    <p class="text-muted text-xs">
-                                        Deksripsi
-                                    </p>
-                                </li>
-
-                                <li class="timeline-item mb-4">
-
-                                    <span class="timeline-icon">
-                                        <i class="fa-solid fa-moon text-primary fa-xs fa-fw"></i>
-                                    </span>
-                                    <h5 class="fw-bold text-xs">Risol</h5>
-                                    <p class="text-muted mb-2 fw-bold text-xs">Tersedia : 17.00 - 20.00 WIB</p>
-                                    <p class="text-muted text-xs">
-                                        Deksripsi
-                                    </p>
-                                </li> --}}
                             </ul>
                         </section>
                     </div>

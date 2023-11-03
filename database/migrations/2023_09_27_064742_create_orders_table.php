@@ -19,10 +19,10 @@ return new class extends Migration
             $table->dateTime('tanggal_pesanan');
             $table->integer('jumlah_pesanan');
             $table->string('detail-karyawan');
-            $table->text('catatan');
-            $table->string('status');
+            $table->text('catatan')->nullable();
+            $table->string('status')->default('Menunggu');
             $table->text('lokasi_pengantaran');
-            $table->text('alasan');
+            $table->text('alasan')->nullable();
             $table->timestamps();
 
             $table->unsignedBigInteger('id_menu');

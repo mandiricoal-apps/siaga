@@ -1,0 +1,123 @@
+[
+    {
+        "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
+        "nik": "0123456789101",
+        "nama_lengkap": "Nama Karyawan 1",
+        "no_hp": "081234567890",
+        "email": "karyawan1@example.com",
+        "jabatan": "Kepala Departemen",
+        "departement": "IT",
+        "divisi": "IT",
+        "perusahaan": "PT.Mandiri Inti Perkasa"
+    },
+    {
+        "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
+        "nik": "0123456789102",
+        "nama_lengkap": "Nama Karyawan 2",
+        "no_hp": "081234567890",
+        "email": "karyawan2@example.com",
+        "jabatan": "Kepala Departemen",
+        "departement": "IT",
+        "divisi": "IT",
+        "perusahaan": "PT.Mandiri Inti Perkasa"
+    },
+    {
+        "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
+        "nik": "0123456789103",
+        "nama_lengkap": "Nama Karyawan 3",
+        "no_hp": "081234567890",
+        "email": "karyawan3@example.com",
+        "jabatan": "Kepala Departemen",
+        "departement": "IT",
+        "divisi": "IT",
+        "perusahaan": "PT.Mandiri Inti Perkasa"
+    },
+    {
+        "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
+        "nik": "0123456789104",
+        "nama_lengkap": "Nama Karyawan 4",
+        "no_hp": "081234567890",
+        "email": "karyawan4@example.com",
+        "jabatan": "Kepala Departemen",
+        "departement": "IT",
+        "divisi": "IT",
+        "perusahaan": "PT.Mandiri Inti Perkasa"
+    },
+    {
+        "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
+        "nik": "0123456789105",
+        "nama_lengkap": "Nama Karyawan 5",
+        "no_hp": "081234567890",
+        "email": "karyawan5@example.com",
+        "jabatan": "Kepala Departemen",
+        "departement": "IT",
+        "divisi": "IT",
+        "perusahaan": "PT.Mandiri Inti Perkasa"
+    },
+    {
+        "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
+        "nik": "0123456789106",
+        "nama_lengkap": "Nama Karyawan 6",
+        "no_hp": "081234567890",
+        "email": "karyawan6@example.com",
+        "jabatan": "Kepala Departemen",
+        "departement": "IT",
+        "divisi": "IT",
+        "perusahaan": "PT.Mandiri Inti Perkasa"
+    },
+    {
+        "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
+        "nik": "0123456789107",
+        "nama_lengkap": "Nama Karyawan 7",
+        "no_hp": "081234567890",
+        "email": "karyawan7@example.com",
+        "jabatan": "Kepala Departemen",
+        "departement": "IT",
+        "divisi": "IT",
+        "perusahaan": "PT.Mandiri Inti Perkasa"
+    },
+    {
+        "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
+        "nik": "0123456789108",
+        "nama_lengkap": "Nama Karyawan 8",
+        "no_hp": "081234567890",
+        "email": "karyawan8@example.com",
+        "jabatan": "Kepala Departemen",
+        "departement": "IT",
+        "divisi": "IT",
+        "perusahaan": "PT.Mandiri Inti Perkasa"
+    },
+    {
+        "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
+        "nik": "0123456789109",
+        "nama_lengkap": "Nama Karyawan 9",
+        "no_hp": "081234567890",
+        "email": "karyawan9@example.com",
+        "jabatan": "Kepala Departemen",
+        "departement": "IT",
+        "divisi": "IT",
+        "perusahaan": "PT.Mandiri Inti Perkasa"
+    },
+    {
+        "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
+        "nik": "01234567891010",
+        "nama_lengkap": "Nama Karyawan 10",
+        "no_hp": "081234567890",
+        "email": "karyawan10@example.com",
+        "jabatan": "Kepala Departemen",
+        "departement": "IT",
+        "divisi": "IT",
+        "perusahaan": "PT.Mandiri Inti Perkasa"
+    },
+    {
+        "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
+        "nik": "01234567891011",
+        "nama_lengkap": "Nama Karyawan 11",
+        "no_hp": "081234567890",
+        "email": "karyawan11@example.com",
+        "jabatan": "Kepala Departemen",
+        "departement": "IT",
+        "divisi": "IT",
+        "perusahaan": "PT.Mandiri Inti Perkasa"
+    }
+]

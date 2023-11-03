@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('shift');
             $table->text('deskripsi');
             $table->string('jenis_makanan');
-            $table->string('status');
+            // $table->string('status');
             $table->timestamps();
         });
     }
