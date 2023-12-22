@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\DataMakanController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\UserController;
+use Illuminate\Routing\RedirectController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,51 +21,70 @@ use Illuminate\Support\Facades\Auth;
 */
 
 
-//catering
 
-Route::middleware(['auth', 'isCatering'])->group(function () {
-    Route::prefix('catering')->group(function () {
-        Route::get('/dashboard', [Controller::class, 'dashboard_catering'])->name('home.dashboard_catering'); //dashboard catering
-        Route::get('/tambah-menu', [MenuController::class, 'tambah_menu'])->name('catering.tambahmenu'); //tambah menu
-        Route::get('/data-snack', [MenuController::class, 'kelola_snack'])->name('catering.kelolasnack'); //kelola snack
-        Route::get('/data-menu-spesial', [MenuController::class, 'kelola_menuspesial'])->name('catering.kelolamenuspesial'); //kelola menu spesial
-        Route::get('/data-snack/ubah/{id}', [MenuController::class, 'ubah_snack'])->name('catering.ubahsnack'); //ubah snack
-        Route::post('/data-snack/update/{id}', [MenuController::class, 'update_snack'])->name('catering.updatesnack'); //update snack
-        Route::get('/data-menu-spesial/ubah/{id}', [MenuController::class, 'ubah_menuspesial'])->name('catering.ubahmenuspesial'); //ubah menu spesial
-        Route::post('/data-menu-spesial/update/{id}', [MenuController::class, 'update_menuspesial'])->name('catering.updatemenuspesial'); //update menu spesial
-        Route::get('/data-pesanan', [OrderController::class, 'data_pesanan'])->name('catering.datapesanan'); //data pesanan
-        Route::post('/proses-tambah-menu', [MenuController::class, 'add_menu'])->name('catering.addmenu'); //tambah menu
-    });
+Route::get('/prasmanan', [DataMakanController::class, 'prasmanan'])->name('component.taping');
+Route::get('/packmeal', [DataMakanController::class, 'packmeal'])->name('component.packmeal');
+Route::post('/proses-taping', [DataMakanController::class, 'simpanTaping'])->name('component.simpantaping');
+Route::post('/proses-packmeal', [DataMakanController::class, 'simpanPackmeal'])->name('component.simpanpackmeal');
+//All
+
+Route::middleware('auth')->group(function () {
+    Route::get('/read-notification/{id}', [UserController::class, 'markAsRead'])->name('read.notification');
+
+    Route::get('/dashboard', [UserController::class, 'dashboard'])->name('home.dashboard'); //dashboard catering
+
+    Route::get('/kelola-menu', [MenuController::class, 'kelola_menu'])->name('data.kelolamenu'); //kelola menu
+    Route::get('/export/snack', [MenuController::class, 'exportSnack'])->name('export.snack');
+    Route::get('/export/menu-spesial', [MenuController::class, 'exportMenus'])->name('export.menuspesial');
+    Route::get('/export/menu-reguler', [MenuController::class, 'exportMenur'])->name('export.menureguler');
+
+    Route::get('/data-makan', [DataMakanController::class, 'datataping'])->name('datamakan'); // data makan
+    Route::get('/export/data-makan', [MenuController::class, 'exportDatamakan'])->name('export.datamakan');
+    Route::get('/export/pesanan', [MenuController::class, 'exportPesanan'])->name('export.pesanan');
+    Route::get('/mark-as-read', [OrderController::class, 'markAsRead'])->name('mark-as-read');
+    Route::get('/profile', [UserController::class, 'vprofile'])->name('profile');
+    Route::post('update-password', [UserController::class, 'upPassword'])->name('updatepassword');
+
+    //Catering
+    Route::get('/tambah-menu', [MenuController::class, 'tambah_menu'])->name('catering.tambahmenu'); //tambah menu
+    Route::post('/proses-tambah-menu', [MenuController::class, 'add_menu'])->name('catering.addmenu'); //tambah menu
+    Route::get('/data-snack/ubah/{id}', [MenuController::class, 'ubah_snack'])->name('ubahsnack'); //ubah snack
+    Route::post('/data-snack/update/{id}', [MenuController::class, 'update_snack'])->name('updatesnack'); //update snack
+    Route::get('/data-menu-spesial/ubah/{id}', [MenuController::class, 'ubah_menuspesial'])->name('ubahmenuspesial'); //ubah menu spesial
+    Route::post('/data-menu-spesial/update/{id}', [MenuController::class, 'update_menuspesial'])->name('updatemenuspesial'); //update menu spesial
+    Route::get('/data-menu-reguler/ubah/{id}', [MenuController::class, 'ubah_menureguler'])->name('ubahmenureguler'); //ubah menu reguler
+    Route::post('/data-menu-reguler/update/{id}', [MenuController::class, 'update_menureguler'])->name('updatemenureguler'); //update menu reguler
+
+
+    Route::get('/data-pesanan', [OrderController::class, 'data_pesanan'])->name('datapesanan'); //data pesanan
+    Route::get('/proses-selesai/{id}', [OrderController::class, 'selesai'])->name('catering.ubahselesai'); //selesai
+    //Departemen
+
+    //GA
+    Route::get('/permintaan-pesanan', [OrderController::class, 'permintaan_pesanan'])->name('permintaanpesanan'); //permintaan pesanan
+    Route::get('/proses-setuju/{id}', [OrderController::class, 'setuju'])->name('setuju'); //terima pesanan others
+    Route::post('/proses-tolak/{id}', [OrderController::class, 'tolak'])->name('tolak'); //tolak pesanan others
+
+    Route::get('/kelola-pengguna', [UserController::class, 'kelolapengguna'])->name('kelolapengguna'); //kelola pengguna
+    Route::post('/proses-tambah-pengguna', [UserController::class, 'add_user'])->name('adduser'); //tambah user
+    Route::post('/proses-ubah-pengguna/{id}', [UserController::class, 'update_user'])->name('updateuser'); //update user
+
+    //Departemen & GA
+    Route::get('/jadwal-menu', [MenuController::class, 'jadwal_menu'])->name('jadwalmenu'); //jadwal menu
+    Route::get('/data-menu', [MenuController::class, 'kelola_menu'])->name('datamenu'); //data menu
+    Route::get('/riwayat-pesanan', [OrderController::class, 'riwayat_pesanan'])->name('riwayatpesanan'); // riwayat pesanan
+    Route::get('/ubah-pesanan/{id}', [OrderController::class, 'ubah_pesanan'])->name('ubahpesanan'); // ubah pesanan
+    Route::get('/get-menu', [OrderController::class, 'getMenu'])->name('get.menu'); //mengambil menu yang tersedia pada form pesanan
+    Route::post('/proses-pesanan', [OrderController::class, 'pesanan'])->name('pesan'); //pesan menu makanan
+    Route::post('/cancel-pesanan/{id}', [OrderController::class, 'cancelpesanan'])->name('cancelpesan'); //cancel_pesanan
+    Route::post('/update-pesanan/{id}', [OrderController::class, 'updatePesanan'])->name('update.pesanan'); //proses update pesanaan
+    //HRD
+    Route::get('/', function () {
+        return redirect()->route('login');
+    })->name('dashboard');
+
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
 
-Route::middleware(['auth', 'isDepartemen'])->group(function () {
-    Route::prefix('departemen')->group(function () {
-        Route::get('/dashboard', [Controller::class, 'dashboard_departemen'])->name('home.dashboard_departemen'); //dashboard departemen
-        Route::get('/pesan-menu', [OrderController::class, 'depart_pesan_menu'])->name('departemen.pesanmenu'); // request pesanan
-        Route::get('/riwayat-pesanan', [OrderController::class, 'depart_riwayat_pesanan'])->name('departemen.riwayatpesanan'); // riwayat pesanan
-        Route::get('/ubah-pesanan', [OrderController::class, 'depart_ubah_pesanan'])->name('departemen.ubahpesanan'); // ubah pesanan
-        Route::get('/data-snack', [MenuController::class, 'depart_snack'])->name('departemen.datasnack'); //data snack departemen
-        Route::get('/data-menu-spesial', [MenuController::class, 'depart_menuspesial'])->name('departemen.datamenuspesial'); //data menu spesial departemen
-        Route::get('/get-menu', [OrderController::class, 'getMenu'])->name('get.menu'); //mengambil menu yang tersedia pada form pesanan
-        Route::post('/proses-pesanan', [OrderController::class, 'pesanan'])->name('ga.pesan'); //pesan menu makanan
-    });
-});
-
-Route::middleware(['auth', 'isGA'])->group(function () {
-    Route::prefix('ga')->group(function () {
-        Route::get('/dashboard', [Controller::class, 'dashboard_ga'])->name('home.dashboard_ga'); //dashboard departemen
-        Route::get('/pesan-menu', [OrderController::class, 'ga_pesan_menu'])->name('ga.pesanmenu'); // request pesanan
-        Route::get('/riwayat-pesanan', [OrderController::class, 'ga_riwayat_pesanan'])->name('ga.riwayatpesanan'); // riwayat pesanan
-        Route::get('/ubah-pesanan', [OrderController::class, 'ga_ubah_pesanan'])->name('ga.ubahpesanan'); // ubah pesanan
-        Route::get('/data-snack', [MenuController::class, 'ga_snack'])->name('ga.datasnack'); //data snack ga
-        Route::get('/data-menu-spesial', [MenuController::class, 'ga_menuspesial'])->name('ga.datamenuspesial'); //data menu spesial ga
-        Route::get('/permintaan-pesanan', [OrderController::class, 'ga_permintaan_pesanan'])->name('ga.permintaanpesanan'); //data menu spesial ga
-        Route::get('/kelola-pengguna', [UserController::class, 'kelolapengguna'])->name('ga.kelolapengguna'); //kelola pengguna
-        Route::post('/proses-tambah-pengguna', [UserController::class, 'add_user'])->name('ga.adduser'); //tambah user
-        Route::post('/proses-ubah-pengguna/{id}', [UserController::class, 'update_user'])->name('ga.updateuser'); //update user
-    });
-});
 
 Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

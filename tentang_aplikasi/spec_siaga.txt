@@ -1,0 +1,10 @@
+Spesification Laravel Siaga :
+
+1. Versi PHP : PHP 8
+2. Versi Laravel : Laravel 9
+
+Database:
+1. Nama Database  : siaga
+2. Table : Migration
+3. Role : Seeder
+4. Password user di database export : password

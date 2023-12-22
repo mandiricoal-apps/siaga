@@ -15,10 +15,9 @@ return new class extends Migration
     {
         Schema::create('menu', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_makanan');
+            $table->json('nama_makanan');
             $table->date('tanggal_berlaku');
             $table->text('shift');
-            $table->text('deskripsi');
             $table->string('jenis_makanan');
             // $table->string('status');
             $table->timestamps();

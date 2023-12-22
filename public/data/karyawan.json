@@ -1,8 +1,9 @@
 [
     {
+        "rfid":"E2004717D0406023201A0110",
         "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
         "nik": "0123456789101",
-        "nama_lengkap": "Nama Karyawan 1",
+        "nama_lengkap": " Chandra Kirana",
         "no_hp": "081234567890",
         "email": "karyawan1@example.com",
         "jabatan": "Kepala Departemen",
@@ -11,9 +12,10 @@
         "perusahaan": "PT.Mandiri Inti Perkasa"
     },
     {
+        "rfid":"E200470FD6C06023A0820113",
         "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
         "nik": "0123456789102",
-        "nama_lengkap": "Nama Karyawan 2",
+        "nama_lengkap": "Risman",
         "no_hp": "081234567890",
         "email": "karyawan2@example.com",
         "jabatan": "Kepala Departemen",
@@ -22,9 +24,10 @@
         "perusahaan": "PT.Mandiri Inti Perkasa"
     },
     {
+        "rfid":"E20047180F30602324090111",
         "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
         "nik": "0123456789103",
-        "nama_lengkap": "Nama Karyawan 3",
+        "nama_lengkap": "Agus Sopyan",
         "no_hp": "081234567890",
         "email": "karyawan3@example.com",
         "jabatan": "Kepala Departemen",
@@ -33,20 +36,22 @@
         "perusahaan": "PT.Mandiri Inti Perkasa"
     },
     {
+        "rfid":"E200470CBFB060236F11010E",
         "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
         "nik": "0123456789104",
-        "nama_lengkap": "Nama Karyawan 4",
+        "nama_lengkap": "Tonaji",
         "no_hp": "081234567890",
         "email": "karyawan4@example.com",
         "jabatan": "Kepala Departemen",
-        "departement": "IT",
+        "departement": "ITT",
         "divisi": "IT",
         "perusahaan": "PT.Mandiri Inti Perkasa"
     },
     {
+        "rfid":"E2004717D0406023201A01104",
         "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
         "nik": "0123456789105",
-        "nama_lengkap": "Nama Karyawan 5",
+        "nama_lengkap": "Hamzah",
         "no_hp": "081234567890",
         "email": "karyawan5@example.com",
         "jabatan": "Kepala Departemen",
@@ -55,9 +60,10 @@
         "perusahaan": "PT.Mandiri Inti Perkasa"
     },
     {
+        "rfid":"E2004717D0406023201A01105",
         "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
         "nik": "0123456789106",
-        "nama_lengkap": "Nama Karyawan 6",
+        "nama_lengkap": "Ansar Taufik",
         "no_hp": "081234567890",
         "email": "karyawan6@example.com",
         "jabatan": "Kepala Departemen",
@@ -66,9 +72,10 @@
         "perusahaan": "PT.Mandiri Inti Perkasa"
     },
     {
+        "rfid":"E2004717D0406023201A01106",
         "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
         "nik": "0123456789107",
-        "nama_lengkap": "Nama Karyawan 7",
+        "nama_lengkap": "Andri Saputra",
         "no_hp": "081234567890",
         "email": "karyawan7@example.com",
         "jabatan": "Kepala Departemen",
@@ -77,9 +84,10 @@
         "perusahaan": "PT.Mandiri Inti Perkasa"
     },
     {
+        "rfid":"E2004717D0406023201A01107",
         "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
         "nik": "0123456789108",
-        "nama_lengkap": "Nama Karyawan 8",
+        "nama_lengkap": "Muhammad Rizki Hasibuan",
         "no_hp": "081234567890",
         "email": "karyawan8@example.com",
         "jabatan": "Kepala Departemen",
@@ -88,9 +96,10 @@
         "perusahaan": "PT.Mandiri Inti Perkasa"
     },
     {
+        "rfid":"E2004717D0406023201A01108",
         "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
         "nik": "0123456789109",
-        "nama_lengkap": "Nama Karyawan 9",
+        "nama_lengkap": " Hendrik",
         "no_hp": "081234567890",
         "email": "karyawan9@example.com",
         "jabatan": "Kepala Departemen",
@@ -99,9 +108,10 @@
         "perusahaan": "PT.Mandiri Inti Perkasa"
     },
     {
+        "rfid":"E2004717D0406023201A01109",
         "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
         "nik": "01234567891010",
-        "nama_lengkap": "Nama Karyawan 10",
+        "nama_lengkap": "Hendra Pasha",
         "no_hp": "081234567890",
         "email": "karyawan10@example.com",
         "jabatan": "Kepala Departemen",
@@ -110,9 +120,10 @@
         "perusahaan": "PT.Mandiri Inti Perkasa"
     },
     {
+        "rfid":"E2004717D0406023201A011010",
         "password": "$2y$10$9yqYVuy.GDmrobZwegfbz.yHL2unoDQzVRUiraJ3kS.ZLasGuOU2K",
         "nik": "01234567891011",
-        "nama_lengkap": "Nama Karyawan 11",
+        "nama_lengkap": " Fajrianoor",
         "no_hp": "081234567890",
         "email": "karyawan11@example.com",
         "jabatan": "Kepala Departemen",

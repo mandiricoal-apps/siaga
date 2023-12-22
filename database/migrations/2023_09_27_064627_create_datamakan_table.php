@@ -15,11 +15,13 @@ return new class extends Migration
     {
         Schema::create('datamakan', function (Blueprint $table) {
             $table->id();
-            $table->string('verfikasi');
-            $table->string('mesin');
-            $table->timestamp('tanggal_jam');
-
-            $table->unsignedBigInteger('id_user');
+            $table->string('nik');
+            $table->string('nama');
+            $table->string('shift');
+            $table->dateTime('tanggalwaktu');
+            $table->string('kategori');
+            $table->string('lokasi');
+            $table->timestamps();
         });
     }
 

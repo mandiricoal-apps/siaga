@@ -4,16 +4,6 @@
     @include('sidebar.sb_departemen')
 @endsection
 
-@section('btn-edit-riwayat')
-    <a href="/departemen/ubah-pesanan" class="text-secondary text-s" data-toggle="tooltip" data-original-title="Edit">
-        <span class="badge badge-md bg-gradient-warning"><i class="fa-solid fa-square-pen"></i><span>
-    </a>
-@endsection
-
-@section('btn-pesan')
-    <button class="btn btn-sm ms-auto bg-gradient-success" type="button" onclick="showConfirmation()">Pesan</button>
-@endsection
-
 @section('content')
     @include('component.riwayatpesanan')
 @endsection

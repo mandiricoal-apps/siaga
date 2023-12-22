@@ -9,8 +9,4 @@ class Datamakan extends Model
 {
     protected $table = "datamakan";
 
-    public function karyawans()
-    {
-        return $this->belongsTo(Karyawan::class);
-    }
 }

@@ -33,18 +33,7 @@ class LoginController extends Controller
     // protected $redirectTo = RouteServiceProvider::HOME;
     public function redirectTo()
     {
-        if (Auth::user()->id_role == 1) {
-            return '/departemen/dashboard';
-        }
-        if (Auth::user()->id_role == 2) {
-            return '/catering/dashboard';
-        }
-        if (Auth::user()->id_role == 3) {
-            return '/hrd/dashboard';
-        }
-        if (Auth::user()->id_role == 4) {
-            return '/ga/dashboard';
-        }
+        return '/dashboard';
     }
 
     protected function logout(Request $request)

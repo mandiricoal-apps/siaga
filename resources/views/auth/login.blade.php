@@ -1,87 +1,9 @@
-{{-- <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> --}}
-
-<!--
-=========================================================
-* Argon Dashboard 2 - v2.0.4
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://www.creative-tim.com/license)
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
+@php
+    use App\Models\User;
+    use Illuminate\Support\Facades\Auth;
+    use Illuminate\Support\Facades\Hash;
+    use Illuminate\Support\Facades\Session;
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,7 +11,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel="icon" type="image/png" href="/images/logo5.jpg">
     <title>
         Siaga
     </title>
@@ -103,6 +25,8 @@
     <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
+    <script src="{{ asset('https://kit.fontawesome.com/42d5adcbca.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('https://kit.fontawesome.com/0fe5c30090.js') }}" crossorigin="anonymous"></script>
     <style>
         .card {
             border-radius: 30px;
@@ -117,75 +41,77 @@
 <body class="">
     <main class="main-content  mt-0">
         <section>
-            <div class="page-header min-vh-100">
+            <div class="page-header min-vh-90">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
-                            <div class="card card-plain">
-                                <div class="card-header pb-0 text-start">
-                                    <h4 class="font-weight-bolder">Sign In</h4>
-                                    <p class="mb-0">Enter your email and password to sign in</p>
+                    <div class="row" style="justify-content: center">
+                        @if ($massages = Session::get('success'))
+                            <div class="col-md-4 alert alert-success alert-dismissible fade show" role="alert">
+                                <span class="alert-text text-white text-xs"><strong>{{ $massages }}</strong></span>
+                                <button type="button" class="btn-close text-white" data-bs-dismiss="alert"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        @endif
+
+                        {{-- style="border-radius: 5%;border-color:#7b5e50 !important;border-style:outset" --}}
+                        <div class="row col-md-12" style="justify-content: center">
+                            <div class="col-xl-4 col-lg-5 col-md-7 d-flex flex-column mx-lg-0 mx-auto">
+                                <div class="col-md-12 mb-" style="text-align: -webkit-center;">
+                                    <img src="/images/logo3.png" class="p-4 w-80" alt="">
                                 </div>
-                                <div class="card-body">
-                                    <form role="form" method="POST" action="{{ route('login') }}">
-                                        @csrf
-                                        <div class="mb-3">
-                                            <input type="email" class="form-control form-control-lg"
-                                                placeholder="Email" aria-label="Email"
-                                                @error('email') is-invalid @enderror" name="email"
-                                                value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                            @error('email')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-                                        <div class="mb-3">
-                                            <input type="password" class="form-control form-control-lg"
-                                                placeholder="Password" aria-label="Password"
-                                                @error('password') is-invalid @enderror" name="password" required
-                                                autocomplete="current-password">
-                                            @error('password')
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-                                        <div class="form-check form-switch">
+                                <div class="card card-plain">
+                                    <div class="card-header pb-0 text-start text-dark">
+                                        <h4 class="font-weight-bolder text-dark">Masuk</h4>
+                                        <p class="mb-0">Silahkan Masukkan Email dan Password!</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <form role="form" method="POST" action="{{ route('login') }}">
+                                            @csrf
+                                            <div class="mb-3">
+                                                <input type="email" class="form-control form-control-lg"
+                                                    placeholder="Email" aria-label="Email"
+                                                    @error('email') is-invalid @enderror name="email"
+                                                    value="{{ old('email') }}" required
+                                                    autocomplete="email"style="border-color:#7b5e50 !important;border-style:outset"
+                                                    autofocus>
+                                                @error('email')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                            <div class="mb-3">
+                                                <input type="password" class="form-control form-control-lg"
+                                                    placeholder="Password" aria-label="Password"
+                                                    @error('password') is-invalid @enderror name="password" required
+                                                    autocomplete="current-password"
+                                                    style="border-color:#7b5e50 !important;border-style:outset">
+                                                @error('password')
+                                                    <span class="invalid-feedback" role="alert">
+                                                        <strong>{{ $message }}</strong>
+                                                    </span>
+                                                @enderror
+                                            </div>
+                                            {{-- <div class="form-check form-switch">
                                             <input class="form-check-input" type="checkbox" id="rememberMe"
                                                 {{ old('remember') ? 'checked' : '' }}>
                                             <label class="form-check-label" for="rememberMe">Remember me</label>
-                                        </div>
-                                        <div class="text-center">
-                                            <button type="submit"
-                                                class="btn btn-lg bg-brown text-white btn-lg w-100 mt-4 mb-0">Sign
-                                                in</button>
-                                        </div>
-                                    </form>
+                                        </div> --}}
+                                            <div class="text-center">
+                                                <button type="submit"
+                                                    class="btn btn-lg bg-brown text-white btn-lg w-100 mt-4 mb-0">Masuk</button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
-                                <div class="card-footer text-center pt-0 px-lg-2 px-1">
-                                    {{-- <p class="mb-4 text-sm mx-auto">
-                                        Don't have an account?
-                                        <a href="javascript:;" class="text-primary text-gradient font-weight-bold">Sign
-                                            up</a>
-                                    </p> --}}
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="col-6 d-lg-flex d-none h-100 my-auto pe-0 position-absolute top-0 end-0 text-center justify-content-center flex-column">
-                            <div class="position-relative bg-brown h-100 m-3 px-7 border-radius-lg d-flex flex-column justify-content-center overflow-hidden"
-                                style="background-image: url('');
-          background-size: cover;">
-                                {{-- <span class="mask bg-brown opacity-6"></span>
-                                <h4 class="mt-5 text-white font-weight-bolder position-relative">"Attention is the new
-                                    currency"</h4>
-                                <p class="text-white position-relative">The more effortless the writing looks, the more
-                                    effort the writer actually put into the process.</p> --}}
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="card-footer text-center" style="text-align-last: right; margin-right:1%;bottom: 20px;right: 20px;">
+                <a href="https://forms.gle/68FDeDYfL6TTkkrQ6" class="btn bg-brown text-white text-lg"><i class="fa-regular fa-comment "></i> Feedback</a>
             </div>
         </section>
     </main>

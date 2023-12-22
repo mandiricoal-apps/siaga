@@ -4,14 +4,6 @@
     @include('sidebar.sb_ga')
 @endsection
 
-@section('btn-tambah')
-<button class="btn btn-sm ms-auto bg-gradient-success" type="button" onclick="showConfirmation()">Tambah</button>
-@endsection
-
-@section('btn-ubah')
-<button class="btn btn-sm ms-auto bg-gradient-warning" type="button" onclick="ushowConfirmation()">Ubah</button>
-@endsection
-
 @section('content')
     @include('component.kelolapengguna')
 @endsection
@@ -23,7 +15,6 @@
         </li>
         <li class="breadcrumb-item text-sm text-white active" aria-current="page">Kelola Pengguna</li>
     </ol>
-    <h4 class="font-weight-bolder text-white mb-0 mt-3">Manajemen Pengguna</h4>
+    <h4 class="font-weight-bolder text-white mb-0 mt-3">Kelola Data Pengguna</h4>
 </nav>
 @endsection
-

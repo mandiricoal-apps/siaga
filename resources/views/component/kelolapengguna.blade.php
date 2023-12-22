@@ -36,7 +36,7 @@
             // Tampilkan pesan error dalam pop-up
             Swal.fire({
                 icon: 'error',
-                title: 'Oops...',
+                title: 'Tidak Berhasil',
                 text: '{{ session('error') }}', // Ambil pesan error dari session
             });
         </script>
@@ -86,14 +86,10 @@
                                             </th>
                                             <th
                                                 class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                                Perusahaan
-                                            </th>
-                                            <th
-                                                class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                                 Status
                                             </th>
                                             <th
-                                                class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                                class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Aksi
                                             </th>
 
                                         </tr>
@@ -133,15 +129,6 @@
                                                         @endempty
                                                     </span>
                                                 </td>
-                                                <td class="align-middle text-center">
-                                                    <span class="text-secondary text-xs font-weight-bold">
-                                                        @empty($user->perusahaan)
-                                                            <i class="text-lg fw-lighter text-dark">-</i>
-                                                        @else
-                                                            {{ $user->perusahaan }}
-                                                        @endempty
-                                                    </span>
-                                                </td>
                                                 <td class="align-middle text-center text-sm">
                                                     @if ($user->status == 'Aktif')
                                                         <span class="badge badge-sm bg-gradient-success"
@@ -155,16 +142,16 @@
 
                                                 <td class="align-middle">
                                                     <a type="button"
-                                                        class="fa-solid fa-eye text-s badge badge-md bg-gradient-info"
+                                                        class="fa-solid fa-eye text-s badge badge-md text-dark"
                                                         data-toggle="tooltip" data-original-title="Detail"
                                                         data-bs-toggle="modal"
-                                                        data-bs-target="#tambahPengguna{{ $user->id }}">
+                                                        data-bs-target="#tambahPengguna{{ $user->id }}" style="border: solid 1px">
                                                         <a type="button"
-                                                            class="fa-solid fa-square-pen text-s badge badge-md bg-gradient-warning"
+                                                            class="fa-solid fa-square-pen text-dark badge badge-md"
                                                             data-toggle="tooltip" data-original-title="Detail"
                                                             data-bs-toggle="modal"
                                                             data-bs-target="#ubahPengguna{{ $user->id }}"
-                                                            style="margin-left: 10%" </a>
+                                                            style="margin-left: 10%;border: solid 1px"> </a>
                                                 </td>
                                             </tr>
                                             <div class="modal fade modal-md" id="tambahPengguna{{ $user->id }}"
@@ -216,6 +203,17 @@
                                                                         <i class="text-xs fw-lighter text-dark">Kosong</i>
                                                                     @else
                                                                         {{ $user->departemen }}
+                                                                    @endempty
+                                                                </p>
+                                                            </div>
+                                                            <div class="d-flex justify-content-between mb-3">
+                                                                <p class="fw-bold mb-0 text-lg text-dark">Divisi
+                                                                </p>
+                                                                <p class="text-muted mb-0 text-md">
+                                                                    @empty($user->divisi)
+                                                                        <i class="text-xs fw-lighter text-dark">Kosong</i>
+                                                                    @else
+                                                                        {{ $user->divisi }}
                                                                     @endempty
                                                                 </p>
                                                             </div>
@@ -280,7 +278,7 @@
                                                                     <form role="form text-left"
                                                                         id="form-ubah-pengguna{{ $user->id }}"
                                                                         method="POST"
-                                                                        action="/ga/proses-ubah-pengguna/{{ $user->id }}">
+                                                                        action="/proses-ubah-pengguna/{{ $user->id }}">
                                                                         @csrf
                                                                         <div class="row">
                                                                             <div class="col-md-6">
@@ -295,7 +293,8 @@
                                                                                         type="text"
                                                                                         name="unik{{ $user->id }}"
                                                                                         id="unik{{ $user->id }}"
-                                                                                        value="0123456789101" readonly>
+                                                                                        value="{{ $user->nik }}"
+                                                                                        readonly>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-md-6">
@@ -409,7 +408,8 @@
                                                                                         Role</label>
                                                                                     <select
                                                                                         class="form-control col-12 "
-                                                                                        name="urole{{$user->id}}" id="urole{{$user->id}}"
+                                                                                        name="urole{{ $user->id }}"
+                                                                                        id="urole{{ $user->id }}"
                                                                                         data-placeholder="Pilih Role"
                                                                                         data-live-search="true"
                                                                                         style="z-index: 2000">
@@ -473,7 +473,7 @@
                                                                         <hr class="horizontal dark">
                                                                         <div class="card-header pb-0 mb-5">
                                                                             <div class="d-flex align-items-center">
-                                                                                @yield('btn-ubah')
+                                                                                <button class="btn btn-sm ms-auto bg-gradient-warning" type="button" onclick="ushowConfirmation()">Ubah</button>
                                                                             </div>
                                                                         </div>
                                                                         <script>
@@ -503,7 +503,6 @@
                                         @endforeach
                                     </tbody>
                                 </table>
-
                                 <div class="modal fade modal-lg" id="exampleModal" tabindex="-1" role="dialog"
                                     aria-labelledby="exampleModalSignTitle" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered modal-md" role="document">
@@ -518,7 +517,7 @@
                                                     </div>
                                                     <div class="card-body pb-3">
                                                         <form role="form text-left" id="form-pengguna" method="POST"
-                                                            action="/ga/proses-tambah-pengguna">
+                                                            action="/proses-tambah-pengguna">
                                                             @csrf
                                                             <div class="row">
                                                                 <div class="col-md-12">
@@ -533,10 +532,12 @@
                                                                             class="selectpicker form-control col-12"
                                                                             name="nama_pengguna" id="nama_pengguna"
                                                                             data-placeholder="Pilih nama pengguna"
-                                                                            data-live-search="true">
-                                                                            <option selected disabled
+                                                                            data-live-search="true"
+                                                                            @error('nama_pengguna') is-invalid @enderror
+                                                                            required>
+                                                                            <option selected sele
                                                                                 class="text-muted text-xs"
-                                                                                value="0">Pilih pengguna
+                                                                                value="">Pilih pengguna
                                                                             </option>
                                                                             @foreach ($karyawan as $data)
                                                                                 <option value="{{ $data['nik'] }}">
@@ -545,6 +546,11 @@
                                                                                 </option>
                                                                             @endforeach
                                                                         </select>
+                                                                        @error('nama_pengguna')
+                                                                            <span class="invalid-feedback" role="alert">
+                                                                                <strong>{{ $message }}</strong>
+                                                                            </span>
+                                                                        @enderror
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6" hidden>
@@ -627,6 +633,18 @@
                                                                             <span class="text-xxs"
                                                                                 style="vertical-align: top;"><i
                                                                                     class="fa-solid fa-star-of-life fa-2xs mb-1 text-danger"></i></span>
+                                                                            Divisi</label>
+                                                                        <input class="form-control" type="text"
+                                                                            name="divisi" id="divisi" readonly>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="example-text-input"
+                                                                            class="form-control-label">
+                                                                            <span class="text-xxs"
+                                                                                style="vertical-align: top;"><i
+                                                                                    class="fa-solid fa-star-of-life fa-2xs mb-1 text-danger"></i></span>
                                                                             Perusahaan</label>
                                                                         <input class="form-control" type="text"
                                                                             name="perusahaan" id="perusahaan"
@@ -676,7 +694,7 @@
                                                             <hr class="horizontal dark">
                                                             <div class="card-header pb-0 mb-5">
                                                                 <div class="d-flex align-items-center">
-                                                                    @yield('btn-tambah')
+                                                                    <button class="btn btn-sm ms-auto bg-gradient-success" type="button" onclick="showConfirmation()">Tambah</button>
                                                                 </div>
                                                             </div>
                                                             <script>
@@ -739,6 +757,7 @@
                 $("input[name='email']").val(selectedKaryawan.email);
                 $("input[name='level']").val(selectedKaryawan.jabatan);
                 $("input[name='departemen']").val(selectedKaryawan.departement);
+                $("input[name='divisi']").val(selectedKaryawan.divisi);
                 $("input[name='perusahaan']").val(selectedKaryawan.perusahaan);
                 $("input[name='no_telp']").val(selectedKaryawan.no_hp);
             }
@@ -775,7 +794,6 @@
                     "next": "",
                     "previous": ""
                 },
-
             }
         });
     });

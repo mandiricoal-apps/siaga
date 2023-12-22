@@ -5,7 +5,7 @@
 @endsection
 
 @section('btn-edit-pesanan')
-    <a class="btn btn-sm ms-auto bg-gradient-warning" href="/departemen/riwayat-pesanan">Ubah</a>
+
 @endsection
 
 @section('content')

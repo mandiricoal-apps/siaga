@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Menu;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -22,19 +24,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+
+     public function index()
     {
-        if (Auth::user()->id_role == 1) {
-            return '/departemen/dashboard';
-        }
-        if (Auth::user()->id_role == 2) {
-            return '/catering/dashboard';
-        }
-        if (Auth::user()->id_role == 3) {
-            return '/hrd/dashboard';
-        }
-        if (Auth::user()->id_role == 4) {
-            return '/ga/dashboard';
-        }
+            return redirect('/dashboard');
     }
+
 }
