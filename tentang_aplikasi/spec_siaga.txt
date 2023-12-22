@@ -1,5 +1,4 @@
-Spesification Laravel Siaga :
-
+Spesifikasi Laravel Siaga :
 1. Versi PHP : PHP 8
 2. Versi Laravel : Laravel 9
 
